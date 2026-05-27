@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SynoTek, LLC — Cloud, AI & Cybersecurity Consultants</title>
+  <meta name="description" content="SynoTek, LLC — fractional CISO, cloud & AI security advisors, and compliance strategist (FedRAMP, NIST, ISO)." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --muted:#6b7280; --accent:#0b66ff; --dark:#0f1724; --card:#f8fafc;
+      --maxw:1200px; --pad:24px; 
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:48px var(--pad);}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;flex-wrap:wrap;gap:20px;}
+    .brand{font-size:24px;font-weight:700;letter-spacing:0.4px;}
+    nav a{margin-left:24px;color:var(--muted);text-decoration:none;font-weight:600;font-size:15px;transition:color .2s}
+    nav a:hover{color:var(--accent);}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;margin-bottom:60px;}
+    @media (max-width:960px){ 
+      .hero{grid-template-columns:1fr; text-align:center;gap:32px;} 
+      .hero .intro{order:2} 
+      .hero .photo{order:1;max-width:360px;margin:0 auto;}
+    }
+    @media (max-width:600px){ 
+      nav{display:none;} 
+      .wrap{padding:32px var(--pad);}
+      header{margin-bottom:32px;}
+    }
+    h1{font-size:42px;line-height:1.1;margin:0 0 16px;font-weight:700}
+    @media (max-width:960px){h1{font-size:36px;}}
+    p.lead{margin:0 0 24px;color:var(--muted);font-size:18px;line-height:1.5}
+    .cta{display:inline-flex;align-items:center;gap:12px;padding:14px 24px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:700;transition:background .2s}
+    .cta:hover{background:#0a58e0;}
+    .photo{max-width:420px;border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+    .photo img{display:block;width:100%;height:auto;border-radius:16px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:60px 0;}
+    @media (max-width:960px){ .grid-3{grid-template-columns:repeat(2,1fr);gap:24px;} }
+    @media (max-width:600px){ .grid-3{grid-template-columns:1fr;} }
+    .card{background:var(--card);padding:28px;border-radius:12px;min-height:200px;box-shadow:0 4px 12px rgba(0,0,0,0.04);}
+    .card h3{margin-top:0;margin-bottom:12px;font-size:20px}
+    .muted{color:var(--muted);font-size:15px;line-height:1.5}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .badge{background:#fff;border:1px solid #e2e8f0;padding:8px 14px;border-radius:8px;font-size:14px;color:var(--muted);font-weight:500}
+    .section{margin:80px 0;}
+    footer{border-top:1px solid #eef2f7;padding-top:24px;margin-top:60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .contact-card{display:flex;flex-direction:column;gap:12px;padding:24px;background:var(--card);border-radius:12px;}
+    .contact-card a{color:var(--accent);text-decoration:none;font-weight:600}
+    .small{font-size:13px;color:var(--muted)}
+    /* Contact form */
+    form .row{display:flex;gap:16px;margin-bottom:16px;}
+    @media (max-width:600px){ form .row{flex-direction:column;} }
+    input,textarea{width:100%;padding:14px;border-radius:8px;border:1px solid #e2e8f0;font-size:15px;background:#fff;}
+    input:focus,textarea:focus{outline:none;border-color:var(--accent);}
+    button[type="submit"]{background:var(--dark);color:white;border:none;padding:14px 28px;border-radius:8px;font-weight:700;cursor:pointer;transition:background .2s}
+    button[type="submit"]:hover{background:#1e293b;}
+    label{display:block;margin-bottom:8px;font-size:15px;color:var(--muted);font-weight:500}
+    .contact-grid{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:start;}
+    @media (max-width:960px){ .contact-grid{grid-template-columns:1fr;gap:32px;} }
+    .text-center{text-align:center}
+    .mb-16{margin-bottom:16px}
+    .mb-24{margin-bottom:24px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">SynoTek, LLC</div>
+      <nav aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="intro">
+        <h1 id="hero-heading">Helping organizations secure cloud, AI, and compliance environments with confidence.</h1>
+        <p class="lead">We are <strong>SynoTek, LLC</strong>, a cybersecurity and cloud security consultancy with over 16 years of experience leading enterprise and government security programs. We provide fractional CISO leadership, cloud & AI security advisory, and compliance readiness to help organizations reduce risk while accelerating innovation.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <a class="cta" href="#contact" title="Schedule a consultation">Schedule a Consultation</a>
+          <a href="mailto:Executive@SynoTekLLC.com?subject=Consultation%20Request" style="color:var(--muted);font-size:15px">Email: Executive@SynoTekLLC.com</a>
+        </div>
+        <div class="badges">
+          <span class="badge">C|CISO</span>
+          <span class="badge">CISSP</span>
+          <span class="badge">PMP</span>
+          <span class="badge">CISA</span>
+          <span class="badge">ISO 42001</span>
+        </div>
+      </div>
+      <aside class="photo" aria-hidden="true">
+
+        <img src="resources/0.jpeg" alt="Logo for SynoTek, LLC" loading="lazy" />
+
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section" aria-labelledby="about-heading">
+      <h2 id="about-heading">Who We Are</h2>
+      <p class="muted mb-24">We are a recognized security leader, trusted advisor, and CISOs with deep expertise in cloud security, AI/ML risk, compliance frameworks, and governance automation. We have guided organizations through FedRAMP authorizations, NIST and ISO compliance, HIPAA readiness, and cloud security programs across enterprise and public sector environments.</p>
+      <p class="muted">We have successfully implemented programs for organizations including the United States Federal government, Big 4, Enterprise AI Platform (IBM Watson), and FedRAMP CSP. Our mission is simple: <strong>help organizations innovate securely while reducing risk, and achieving compliance faster.</strong></p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section" aria-labelledby="services-heading">
+      <h2 id="services-heading">Services</h2>
+      <div class="grid-3" role="list">
+        <div class="card" role="listitem" aria-labelledby="svc1">
+          <h3 id="svc1"> Virtual CISO (vCISO) Services </h3>
+<p class="muted">Strategic Security Leadership: Executive-level security program guidance and decision support</p>
+<p class="muted">Security Program Development: Security strategy, roadmap, policies, standards, and procedures</p>
+<p class="muted">Risk Management: Enterprise risk assessment, risk treatment planning, risk register maintenance</p>
+<p class="muted">Board & Executive Reporting: Monthly/quarterly security metrics, KPIs, and executive presentations</p>
+<p class="muted">Compliance Oversight: Multi-framework compliance program management (NIST, HIPAA, ISO, etc.)</p>
+<p class="muted">Vendor Risk Management: Third-party security assessments, vendor questionnaire review</p>
+<p class="muted">Incident Response Planning: IR plan development, tabletop exercises, breach response coordination</p>
+<p class="muted">Security Awareness: Training program development and delivery</p>
+<p class="muted">Budget Planning: Security tool evaluation, ROI analysis, budget recommendations</p>
+ <p class="muted">Deliverables:</p>
+ <ul class="muted">
+<li>Security program strategy and roadmap</li>
+<li>Monthly executive security reports</li>
+<li>Quarterly board presentations</li>
+<li>Security policies and procedures library</li>
+<li>Risk register and treatment plans</li>
+<li>Incident response plan</li>
+<li>Security awareness training materials</li>
+<li>Annual security budget recommendations</li>
+  </ul>
+  </div>
+ <div class="card" role="listitem" aria-labelledby="svc2">
+<h3 id="svc2">GRC (Governance, Risk & Compliance) Program Implementation</h3>
+<p class="muted">Framework Assessment: Gap analysis across multiple frameworks (NIST RMF, CSF, ISO 27001, CIS, HIPAA, PCI-DSS)</p>
+<p class="muted">GRC Program Design: Governance structure, risk management methodology, compliance program</p>
+<p class="muted">Policy & Procedure Development: Comprehensive security documentation aligned to regulatory requirements</p>
+<p class="muted">Risk Assessment Services: Annual risk assessments, threat modeling, vulnerability management program</p>
+<p class="muted">Compliance Automation: GRC tool implementation (ServiceNow IRM, Archer, Compliance.ai), automated control monitoring</p>
+<p class="muted">Control Testing: Internal control testing, evidence collection, assessment coordination</p>
+<p class="muted">Audit Support: Preparation for external audits (SOC 2, ISO 27001, HITRUST)</p>
+<p class="muted">Third-Party Risk Management: Vendor assessment program, supply chain risk management</p>
+ <p class="muted">Deliverables:</p>
+ <ul class="muted">
+<li>Multi-framework gap analysis report</li>
+<li>GRC program framework documentation</li>
+<li>Security policies, standards, and procedures (50+ documents)</li>
+<li>Risk assessment report and risk register</li>
+<li>Control testing workpapers and evidence</li>
+<li>GRC tool configuration and automation scripts</li>
+<li>Audit readiness assessment</li>
+<li>Compliance dashboard and reporting</li>
+  </ul>
+  </div>
+        <div class="card" role="listitem" aria-labelledby="svc3">
+          <h3 id="svc3">AI/ML Security & Compliance</h3>
+<p class="muted">AI Security Assessment: Risk assessment of AI/ML systems, data governance review</p>
+<p class="muted">ISO/IEC 42001 Implementation: AI Management System development and certification support</p>
+<p class="muted">AI Governance Framework: AI ethics policy, responsible AI guidelines, risk management</p>
+<p class="muted">Data Privacy & Protection: AI data lifecycle security, privacy impact assessments</p>
+<p class="muted">Model Security: ML model security testing, adversarial attack prevention, model versioning</p>
+<p class="muted">AI Compliance: Regulatory compliance (EU AI Act, emerging US regulations)</p>
+<p class="muted">Automated Decision-Making Controls: Transparency, explainability, bias detection</p>
+<p class="muted">AI Security Architecture: Secure MLOps, model deployment security</p>
+ <p class="muted">Deliverables:</p>
+ <ul class="muted">
+<li>AI Security Risk Assessment</li>
+<li>ISO/IEC 42001 AIMS documentation</li>
+<li>AI Governance Policy and Framework</li>
+<li>Data governance for AI systems</li>
+<li>AI security architecture document</li>
+<li>Compliance mapping (GDPR, regulations)</li>
+<li>AI model security testing report</li>
+<li>MLOps security procedures</li>
+  </ul>
+  </div>
+    <div class="card" role="listitem" aria-labelledby="svc4">
+          <h3 id="svc4">Cloud Security Architecture & Implementation</h3>
+<p class="muted">Multi-Cloud Security Strategy: Architecture design for Azure, AWS, and/or GCP</p>
+<p class="muted">Security Baseline Development: Cloud-native security controls, guardrails, and automation</p>
+<p class="muted">Identity & Access Management (IAM): RBAC, LDAP integration, privileged access management</p>
+<p class="muted">Network Security: Virtual network segmentation, encryption, firewall rules, security groups</p>
+<p class="muted">Data Protection: Encryption at rest and in transit, key management, database security</p>
+<p class="muted">Security Monitoring: SIEM integration, cloud-native monitoring tools, automated alerting</p>
+<p class="muted">Infrastructure as Code (IaC) Security: Secure configuration templates, automated compliance checks</p>
+<p class="muted">Security Automation: DevSecOps integration, CI/CD pipeline security</p>
+ <p class="muted">Deliverables:</p>
+ <ul class="muted">
+<li>Cloud Security Architecture Document</li>
+<li>Security baseline configurations</li>
+<li>IaC templates (Terraform, CloudFormation, ARM)</li>
+<li>Network architecture diagrams</li>
+<li>IAM strategy and role definitions</li>
+<li>Automated security monitoring dashboards</li>
+<li>Security runbooks and procedures</li>
+  </ul>
+  </div>
+    <div class="card" role="listitem" aria-labelledby="svc5">
+          <h3 id="svc5">FedRAMP Authorization & Continuous Monitoring</h3>
+<p class="muted">FedRAMP Readiness Assessment: Comprehensive gap analysis against FedRAMP Moderate or High baseline requirements</p>
+<p class="muted">Authorization Package Development: Complete System Security Plan (SSP), security architecture documentation, policies and procedures</p>
+<p class="muted">Control Implementation Support: Guidance on implementing NIST 800-53 security controls across your cloud environment</p>
+<p class="muted">3PAO Coordination: Liaison with Third-Party Assessment Organizations, preparation for security assessment</p>
+<p class="muted">Continuous Monitoring Program: Ongoing monthly/quarterly assessment support, POA&M management, security metrics and reporting</p>
+<p class="muted">ATO Support: Preparation of authorization packages for Agency Authorizing Officials</p>
+ <p class="muted">Deliverables:</p>
+ <ul class="muted">
+<li>FedRAMP Gap Analysis Report</li>
+<li>System Security Plan (SSP) - 300+ pages</li>
+<li>Security Assessment Plan (SAP)</li>
+<li>Security Assessment Report (SAR) coordination</li>
+<li>Plan of Action & Milestones (POA&M)</li>
+<li>Monthly continuous monitoring reports</li>
+<li>Incident response documentation</li>
+  </ul>
+  </div>
+    <div class="card" role="listitem" aria-labelledby="svc6">
+          <h3 id="svc6">SPECIALIZED SERVICES (À LA CARTE)</h3>
+ <p>Security Assessment & Testing</p>
+ <ul class="muted">
+<li>Vulnerability Assessments</li>
+<li>Penetration Testing Coordination</li>
+<li>Security Architecture Review</li>
+<li>Cloud Security Posture Assessment</li>
+<li>WiFi Site Survey</li>
+  </ul>
+<p>Training & Workshops</p>
+ <ul class="muted">
+<li>Executive Security Awareness (Half-day)</li>
+<li>FedRAMP Training (Full-day)</li>
+<li>Cloud Security Workshop (2-day)</li>
+<li>Custom Training Development</li>
+  </ul>
+<p>Documentation Services</p>
+ <ul class="muted">
+<li>System Security Plan (SSP) Development</li>
+<li>Security Policy Library (50+ documents)</li>
+<li>Incident Response Plan</li>
+<li>Business Continuity/DR Plan</li>
+  </ul>
+<p>Advisory Services</p>
+ <ul class="muted">
+<li>Hourly Consulting</li>
+<li>Half-Day Workshop</li>
+<li>Full-Day Workshop</li>
+<li>Executive Advisory (Quarterly)</li>
+  </ul>
+  </div>
+    </section>
+    <!-- APPROACH -->
+    <section class="section" aria-labelledby="approach-heading">
+      <h2 id="approach-heading">How We Work</h2>
+      <p class="muted">We combine executive-level strategy with practical engineering controls and automation to deliver outcomes that matter: reduced audit effort, improved cloud posture, and measurable risk reduction. Typical engagement models include fixed deliverable assessments, short-term remediation sprints, and ongoing fractional CISO retainers.</p>
+    </section>
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Let’s talk</h2>
+      <div class="contact-grid">
+        <div>
+          <p class="muted mb-24">Whether you need a fractional CISO, cloud/AI security guidance, or compliance support, we help organizations move forward with confidence. Use the form to describe your needs and we will reply within 48 business hours.</p>
+          <form id="contactForm" onsubmit="handleFormSubmit(event)" aria-label="Contact SynoTek, LLC">
+            <div class="row">
+              <div style="flex:1">
+                <label for="name">Your name <span class="small" aria-hidden="true">*</span></label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div style="flex:1">
+                <label for="email">Your email <span class="small" aria-hidden="true">*</span></label>
+                <input type="email" name="email" id="email" required />
+              </div>
+            </div>
+            <div class="mb-16">
+              <label for="organization">Organization (optional)</label>
+              <input type="text" name="organization" id="organization" />
+            </div>
+            <div class="mb-16">
+              <label for="message">What do you need help with? <span class="small" aria-hidden="true">*</span></label>
+              <textarea name="message" id="message" rows="6" required></textarea>
+            </div>
+            <button type="submit">Send message</button>
+            <p class="small" style="margin-top:12px">Or email directly: <a href="mailto:Executive@SynoTekLLC.com">Executive@SynoTekLLC.com</a></p>
+          </form>
+        </div>
+        <aside class="contact-card" aria-labelledby="contact-details">
+          <h3 id="contact-details">Contact details</h3>
+          <div class="muted">SynoTek, LLC</div>
+          <div><a href="mailto:Executive@SynoTekLLC.com">Executive@SynoTekLLC.com</a></div>
+          <div><a href="tel:+13038382188">303-838-2188</a></div>
+          <div class="mb-16 mt-24">
+            <div class="small mb-8">Certifications</div>
+            <div class="badges">
+              <span class="badge">C|CISO</span>
+              <span class="badge">CISSP</span>
+              <span class="badge">PMP</span>
+              <span class="badge">CISA</span>
+              <span class="badge">ISO 42001</span>
+            </div>
+          </div>
+          <div>
+            <h4 style="font-size:16px;margin:16px 0 8px">Privacy and Cookie Policies</h4>
+            <p class="muted small">Cookies are not used on this site. You can continue to access this website and there will be no placement of cookies on your device.</p>
+            <p><a href="synotekllcprivacy.html">Privacy Policy</a><br><a href="synotekllccookie.html">Cookie Policy</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> SynoTek, LLC — Cybersecurity & Cloud Security Consultancy</div>
+      <div>
+        <a href="https://www.linkedin.com/company/synotek-llc" target="_blank" rel="noopener" class="small" style="margin-right:16px">LinkedIn</a>
+        <a href="mailto:Executive@SynoTekLLC.com" class="small">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleFormSubmit(evt){
+      evt.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const org = document.getElementById('organization').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Please complete all required fields.');
+        return;
+      }
+      const subject = encodeURIComponent('Consultation request from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        (org ? 'Organization: ' + org + '\n' : '') +
+        'Email: ' + email + '\n\n' +
+        message
+      );
+      const mailto = `mailto:Executive@SynoTekLLC.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>

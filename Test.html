@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SynoTek, LLC | Secure Hosting & Short-Term Rental Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        .hero-bg { background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url('https://picsum.photos/id/1015/2000/1200'); background-size: cover; background-position: center; }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-12px); box-shadow: 0 25px 50px -12px rgb(0 0 0 / 0.15); }
+    </style>
+</head>
+<body class="font-sans text-gray-800">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
+                <div><span class="text-2xl font-bold tracking-tight">SynoTek</span><span class="text-xs text-gray-500 block -mt-1">LLC</span></div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html" class="text-blue-600 font-semibold">Home</a>
+                <a href="hosting.html" class="hover:text-blue-600">Hosting</a>
+                <a href="rentals.html" class="hover:text-blue-600">Rentals</a>
+                <a href="booking.html" class="hover:text-blue-600">Booking</a>
+                <a href="security.html" class="hover:text-blue-600">Security</a>
+                <a href="about.html" class="hover:text-blue-600">About</a>
+                <a href="pricing.html" class="hover:text-blue-600">Pricing</a>
+            </div>
+            <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Free Audit</a>
+            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+            <div class="px-6 flex flex-col gap-6 text-lg">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Web Hosting</a>
+                <a href="rentals.html">Rental Management</a>
+                <a href="booking.html">Booking Solutions</a>
+                <a href="security.html">Cybersecurity</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-bg text-white py-32">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Secure Hosting.<br>Smart Rental Management.</h1>
+            <p class="text-2xl md:text-3xl mb-10">Web hosting, short-term rental management, booking systems & enterprise cybersecurity.</p>
+            <a href="contact.html" class="bg-white text-blue-700 px-10 py-5 rounded-3xl text-xl font-semibold inline-flex items-center gap-3">Get Your Free Audit →</a>
+        </div>
+    </header>
+
+    <section class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-center mb-16">Our Services</h2>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <a href="hosting.html" class="card-hover bg-white rounded-3xl p-8">
+                    <img src="https://picsum.photos/id/201/600/400" class="rounded-2xl mb-6 w-full h-48 object-cover" alt="Hosting">
+                    <h3 class="text-2xl font-semibold mb-2">Web Hosting</h3>
+                    <p class="text-gray-600">Fast, secure hosting for your business.</p>
+                </a>
+                <a href="rentals.html" class="card-hover bg-white rounded-3xl p-8">
+                    <img src="https://picsum.photos/id/1015/600/400" class="rounded-2xl mb-6 w-full h-48 object-cover" alt="Rentals">
+                    <h3 class="text-2xl font-semibold mb-2">Rental Management</h3>
+                    <p class="text-gray-600">Maximize your property revenue.</p>
+                </a>
+                <a href="booking.html" class="card-hover bg-white rounded-3xl p-8">
+                    <img src="https://picsum.photos/id/133/600/400" class="rounded-2xl mb-6 w-full h-48 object-cover" alt="Booking">
+                    <h3 class="text-2xl font-semibold mb-2">Booking Solutions</h3>
+                    <p class="text-gray-600">Direct booking engines & channel managers.</p>
+                </a>
+                <a href="security.html" class="card-hover bg-white rounded-3xl p-8">
+                    <img src="https://picsum.photos/id/180/600/400" class="rounded-2xl mb-6 w-full h-48 object-cover" alt="Security">
+                    <h3 class="text-2xl font-semibold mb-2">Cybersecurity</h3>
+                    <p class="text-gray-600">Protect your business and properties.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <p>© 2026 SynoTek, LLC • Denver, Colorado • All Rights Reserved</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isOpen = false;
+        mobileBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileBtn.innerHTML = isOpen ? '✕' : '☰';
+        });
+    </script>
+</body>
+</html>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6 shadow-lg">
+            <div class="flex flex-col px-6 space-y-6 text-lg font-medium">
+                <a href="#services" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Services</a>
+                <a href="#hosting" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Web Hosting</a>
+                <a href="#rentals" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Rental Management</a>
+                <a href="#booking" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Booking Solutions</a>
+                <a href="#security" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Cybersecurity</a>
+                <a href="#contact" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Get Free Audit</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <header class="hero-bg text-white py-32">
+        <div class="max-w-5xl mx-auto px-6 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                Secure Hosting.<br>Smart Rental Management.
+            </h1>
+            <p class="text-2xl md:text-3xl mb-8 text-blue-100">
+                Expert web hosting, short-term rental management, and enterprise-grade cybersecurity.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#contact" class="bg-white text-blue-700 hover:bg-blue-50 px-10 py-4 rounded-3xl text-xl font-semibold inline-flex items-center justify-center gap-3 transition-all">
+                    <i class="fa-solid fa-rocket"></i> Start Your Free Audit
+                </a>
+                <a href="#services" class="border-2 border-white hover:bg-white/10 px-10 py-4 rounded-3xl text-xl font-semibold inline-flex items-center justify-center gap-3 transition-all">
+                    Explore Services
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- SERVICES SECTION (shortened for space - keep your previous full version) -->
+    <section id="services" class="py-24 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Our Core Services</h2>
+                <p class="max-w-2xl mx-auto text-lg text-gray-600">Secure. Reliable. Profitable.</p>
+            </div>
+            <!-- Add your 4 service cards here (same as previous response) -->
+        </div>
+    </section>
+
+    <!-- FINAL CTA WITH VALIDATION -->
+    <section id="contact" class="py-24 bg-blue-600 text-white">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Secure and Grow Your Business?</h2>
+            <p class="text-xl mb-10">Get a free hosting + security audit and rental revenue consultation (valued at $450).</p>
+            
+            <form id="contactForm" class="max-w-md mx-auto space-y-6">
+                <div>
+                    <input type="text" id="name" name="name" 
+                           class="form-input w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 placeholder:text-white/70 focus:outline-none text-white"
+                           placeholder="Full Name" required>
+                    <div id="nameError" class="error"></div>
+                </div>
+                
+                <div>
+                    <input type="email" id="email" name="email" 
+                           class="form-input w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 placeholder:text-white/70 focus:outline-none text-white"
+                           placeholder="Business Email" required>
+                    <div id="emailError" class="error"></div>
+                </div>
+                
+                <div>
+                    <input type="tel" id="phone" name="phone" 
+                           class="form-input w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 placeholder:text-white/70 focus:outline-none text-white"
+                           placeholder="Phone Number">
+                    <div id="phoneError" class="error"></div>
+                </div>
+                
+                <div>
+                    <textarea id="message" name="message" rows="4"
+                              class="form-input w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 placeholder:text-white/70 focus:outline-none text-white"
+                              placeholder="Tell us about your hosting or rental needs..."></textarea>
+                </div>
+                
+                <button type="submit" id="submitBtn"
+                        class="w-full bg-white text-blue-700 hover:bg-blue-50 py-5 rounded-3xl font-bold text-lg transition-all flex items-center justify-center gap-3">
+                    <span id="btnText">Claim Your Free Audit Now</span>
+                </button>
+            </form>
+            
+            <p class="text-sm mt-8 opacity-75">We respect your inbox. No spam, ever.</p>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400">
+        <div class="max-w-7xl mx-auto px-6 pt-16 pb-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div>
+                    <div class="flex items-center gap-3 text-white mb-6">
+                        <div class="w-9 h-9 bg-blue-600 rounded-2xl flex items-center justify-center text-2xl font-bold">S</div>
+                        <span class="text-2xl font-bold">SynoTek, LLC</span>
+                    </div>
+                    <p class="text-sm">Denver, Colorado</p>
+                    <p class="text-sm">Expert IT & Property Solutions Since 2009</p>
+                </div>
+                <!-- Other footer columns... -->
+            </div>
+            <div class="text-center text-xs mt-12 pt-8 border-t border-gray-800">
+                © 2026 SynoTek, LLC. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // ============= MOBILE MENU =============
+        const mobileButton = document.getElementById('mobileMenuButton');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isOpen = false;
+
+        function toggleMobileMenu() {
+            isOpen = !isOpen;
+            if (isOpen) {
+                mobileMenu.classList.remove('hidden');
+                mobileButton.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            } else {
+                mobileMenu.classList.add('hidden');
+                mobileButton.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            }
+        }
+
+        // Close menu when clicking links or outside
+        document.addEventListener('click', function(e) {
+            if (isOpen && !mobileMenu.contains(e.target) && e.target !== mobileButton) {
+                toggleMobileMenu();
+            }
+        });
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && isOpen) toggleMobileMenu();
+        });
+
+        // ============= FORM VALIDATION =============
+        const form = document.getElementById('contactForm');
+        const nameInput = document.getElementById('name');
+        const emailInput = document.getElementById('email');
+        const phoneInput = document.getElementById('phone');
+        const submitBtn = document.getElementById('submitBtn');
+        const btnText = document.getElementById('btnText');
+
+        function showError(input, message) {
+            const errorDiv = document.getElementById(input.id + 'Error');
+            if (errorDiv) {
+                errorDiv.textContent = message;
+            }
+            input.classList.add('!border-red-400');
+        }
+
+        function clearError(input) {
+            const errorDiv = document.getElementById(input.id + 'Error');
+            if (errorDiv) errorDiv.textContent = '';
+            input.classList.remove('!border-red-400');
+        }
+
+        function validateEmail(email) {
+            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+        }
+
+        function validatePhone(phone) {
+            return phone.length === 0 || /^[\+]?[\d\s\-\(\)]{10,}$/.test(phone);
+        }
+
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            let isValid = true;
+
+            // Name validation
+            clearError(nameInput);
+            if (nameInput.value.trim().length < 3) {
+                showError(nameInput, "Name must be at least 3 characters");
+                isValid = false;
+            }
+
+            // Email validation
+            clearError(emailInput);
+            if (!validateEmail(emailInput.value.trim())) {
+                showError(emailInput, "Please enter a valid email address");
+                isValid = false;
+            }
+
+            // Phone validation (optional)
+            clearError(phoneInput);
+            if (!validatePhone(phoneInput.value.trim())) {
+                showError(phoneInput, "Please enter a valid phone number");
+                isValid = false;
+            }
+
+            if (isValid) {
+                // Simulate submission
+                const originalText = btnText.textContent;
+                submitBtn.disabled = true;
+                btnText.textContent = "Submitting...";
+
+                setTimeout(() => {
+                    alert("✅ Thank you! Your free audit request has been received.\n\nWe'll contact you within 1 business day.");
+                    form.reset();
+                    submitBtn.disabled = false;
+                    btnText.textContent = originalText;
+                }, 1500);
+            }
+        });
+
+        // Real-time validation
+        nameInput.addEventListener('input', () => clearError(nameInput));
+        emailInput.addEventListener('input', () => clearError(emailInput));
+        phoneInput.addEventListener('input', () => clearError(phoneInput));
+
+        console.log('%c✅ SynoTek Website Loaded with Mobile Menu + Form Validation', 'color: #2563eb; font-weight: bold; font-size: 14px');
+    </script>
+</body>
+</html>

@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SynoTek, LLC — Cloud, AI & Cybersecurity Consultants</title>
+  <meta name="description" content="SynoTek, LLC — Privacy Policy." />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#ffffff; --muted:#6b7280; --accent:#0b66ff; --dark:#0f1724; --card:#f8fafc;
+      --maxw:1200px; --pad:24px; 
+      font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--dark);-webkit-font-smoothing:antialiased;}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:48px var(--pad);}
+    header{display:flex;justify-content:space-between;align-items:center;margin-bottom:48px;flex-wrap:wrap;gap:20px;}
+    .brand{font-size:24px;font-weight:700;letter-spacing:0.4px;}
+    nav a{margin-left:24px;color:var(--muted);text-decoration:none;font-weight:600;font-size:15px;transition:color .2s}
+    nav a:hover{color:var(--accent);}
+    .hero{display:grid;grid-template-columns:1fr 420px;gap:48px;align-items:center;margin-bottom:60px;}
+    @media (max-width:960px){ 
+      .hero{grid-template-columns:1fr; text-align:center;gap:32px;} 
+      .hero .intro{order:2} 
+      .hero .photo{order:1;max-width:360px;margin:0 auto;}
+    }
+    @media (max-width:600px){ 
+      nav{display:none;} 
+      .wrap{padding:32px var(--pad);}
+      header{margin-bottom:32px;}
+    }
+    h1{font-size:42px;line-height:1.1;margin:0 0 16px;font-weight:700}
+    @media (max-width:960px){h1{font-size:36px;}}
+    p.lead{margin:0 0 24px;color:var(--muted);font-size:18px;line-height:1.5}
+    .cta{display:inline-flex;align-items:center;gap:12px;padding:14px 24px;border-radius:8px;background:var(--accent);color:white;text-decoration:none;font-weight:700;transition:background .2s}
+    .cta:hover{background:#0a58e0;}
+    .photo{max-width:420px;border-radius:16px;overflow:hidden;background:var(--card);box-shadow:0 10px 30px rgba(0,0,0,0.08);}
+    .photo img{display:block;width:100%;height:auto;border-radius:16px}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:32px;margin:60px 0;}
+    @media (max-width:960px){ .grid-3{grid-template-columns:repeat(2,1fr);gap:24px;} }
+    @media (max-width:600px){ .grid-3{grid-template-columns:1fr;} }
+    .card{background:var(--card);padding:28px;border-radius:12px;min-height:200px;box-shadow:0 4px 12px rgba(0,0,0,0.04);}
+    .card h3{margin-top:0;margin-bottom:12px;font-size:20px}
+    .muted{color:var(--muted);font-size:15px;line-height:1.5}
+    .badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}
+    .badge{background:#fff;border:1px solid #e2e8f0;padding:8px 14px;border-radius:8px;font-size:14px;color:var(--muted);font-weight:500}
+    .section{margin:80px 0;}
+    footer{border-top:1px solid #eef2f7;padding-top:24px;margin-top:60px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px}
+    .contact-card{display:flex;flex-direction:column;gap:12px;padding:24px;background:var(--card);border-radius:12px;}
+    .contact-card a{color:var(--accent);text-decoration:none;font-weight:600}
+    .small{font-size:13px;color:var(--muted)}
+    /* Contact form */
+    form .row{display:flex;gap:16px;margin-bottom:16px;}
+    @media (max-width:600px){ form .row{flex-direction:column;} }
+    input,textarea{width:100%;padding:14px;border-radius:8px;border:1px solid #e2e8f0;font-size:15px;background:#fff;}
+    input:focus,textarea:focus{outline:none;border-color:var(--accent);}
+    button[type="submit"]{background:var(--dark);color:white;border:none;padding:14px 28px;border-radius:8px;font-weight:700;cursor:pointer;transition:background .2s}
+    button[type="submit"]:hover{background:#1e293b;}
+    label{display:block;margin-bottom:8px;font-size:15px;color:var(--muted);font-weight:500}
+    .contact-grid{display:grid;grid-template-columns:1fr 440px;gap:48px;align-items:start;}
+    @media (max-width:960px){ .contact-grid{grid-template-columns:1fr;gap:32px;} }
+    .text-center{text-align:center}
+    .mb-16{margin-bottom:16px}
+    .mb-24{margin-bottom:24px}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">SynoTek, LLC</div>
+      <nav aria-label="Primary navigation">
+        <a href="index.html">Home</a>
+        <a href="#purpose">Purpose</a>
+        <a href="#contents">Contents</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="intro">
+        <h1 id="hero-heading">Cookie Policy - 12/29/2025.</h1>
+        <p class="lead">At <strong>SynoTek, LLC</strong>, we use cookies and similar technologies to enhance your browsing experience, analyze website traffic, and improve our services. This cookie policy explains what cookies are, how we use them on our website, what types of cookies we employ, and how you can manage your cookie preferences. We believe in being transparent about the data we collect through these technologies and giving you control over your online experience. By understanding how cookies work on our site, you can make informed decisions about your privacy while enjoying the full functionality of our services.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;align-items:center">
+          <a class="cta" href="#contact" title="Schedule a consultation">Question about cookies?</a>
+        </div>
+      </div>
+      <aside class="photo" aria-hidden="true">
+
+        <img src="resources/0.jpeg" alt="Logo for SynoTek, LLC" loading="lazy" />
+
+      </aside>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="purpose" class="section" aria-labelledby="puroose-heading">
+      <h2 id="purpose-heading">COOKIE POLICY PURPOSE</h2>
+      <p class="muted mb-24">This Cookie Policy (the “Cookie Policy”) governs all aspects of SYNOTEK, LLC’s use of cookies on the www.SynoTekLLC.com website. SYNOTEK, LLC details its use of cookies and how you can adjust your browser settings to avoid cookies in our cookie policy.</p>
+      <H3>INTRODUCTION</H3>
+      <p class="muted">SYNOTEK, LLC is a cybersecurity and compliance professional services firm providing consulting services. SYNOTEK, LLC is the data controller of personal data as defined herein, which means they determine what personal data is needed and how it is used.</p>
+      <p class="muted">The purpose of this policy is to explain our use of cookies this website, how we use cookies on this website and how you may adjust your settings.</p>
+      <p class="muted">Our Privacy Policy describes in greater detail our privacy policies and practices.:</p>
+    </section>
+
+    <section id="contents" class="section" aria-labelledby="contents-heading">
+      <h2 id="contents-heading">CONTENTS OF THIS POLICY</h2>
+      <ul class="muted">
+        <li>Definitions</li>
+        <li>Categories of Cookies Used</li>
+        <li>Reason for Our Collection of Data Using Cookies and or Web Beacons</li>
+        <li>Targeted Advertising</li>
+        <li>Consent</li>
+        <li>Adjusting Your Settings</li>
+      </ul>
+    </section>
+    
+    <h2>DESCRIPTION OF COOKIES</h2>
+    <h3>DEFINITIONS</h3>
+    <h4>Cookies</h4>
+    <p class="muted">Generally, cookies are small text files that are placed on your device when you browse the web. There are various types of cookies, depending on two factors: how long they are valid and who places them on your device.</p>
+    <h4>Duration</h4>
+    <p class="muted"><strong>Session cookies</strong> expire upon closing your browser.
+    <br><strong>Persistent cookies</strong> expire at a future date (days, weeks, months and/or years).</p>
+    <h4>Tyoes of Cookies</h4>
+    <p class="muted"><strong>First-party cookies</strong> are placed on your device by the owner of the website that you are browsing.
+    <br><strong>Third-party cookies</strong> are placed on your device by a third-party advertiser and not the website you are currently browsing.</p>
+    <p class="muted"></p>
+    <h4>Web Beacons</h4>
+    <p class="muted">Web beacons are also known as GIF files. Generally, web beacons are transparent graphic images that are placed on a website and/or in an email and are used to monitor the behavior of the user visiting the website or who sends the email. Web beacons are frequently used in connection with cookies.</p>
+    
+    <h3>CATEGORIES OF COOKIE THAT WE USE</h3>
+    <p class="muted">SYNOTEK, LLC does not use first-party session cookies.</p>
+    <p class="muted">SYNOTEK, LLC does not use non-essential cookies.</p>
+    
+    
+    <h2>NECESSITY AND REASON FOR COLLECTION OF PERSONAL DATA</h2>
+    <p class="muted">SYNOTEK, LLC does not use collect data from users on www.SynoTekLLC.com through cookies, log files, device identifiers, location data, and web beacons to do any or all the following:</p>
+    <ul class="muted">
+    <li>store information so that the user will not have to re-enter it during their current or next visit to our website;</li>
+    <li>provide custom, personalized content, information, and advertising;</li>
+    <li>monitor the quality and/or the effectiveness of our services;</li>
+    <li>produce aggregate metrics and analytics such as the number of visitors, traffic, usage, and demographic patterns of users of our websites;</li>
+    <li>diagnose or fix technical issues with our services; and</li>
+    <li>otherwise plan for and enhance our services.</li>
+    </ul>
+    
+    <h3>TARGETED ADVERTISING</h3>
+    <h4>Tracking</h4>
+    <p class="muted">SYNOTEK,LLC does not allow third-party ad networks, social media companies, and other third-party services to collect information about browsing activity or behavior of users of our website through cookies, social plug-ins, and/or other tracking technology.</p>
+    <p class="muted">SYNOTEK, LLC does use real-time security monitoring tools that provides SYNOTEK, LLC with information that monitors user activity and user engagement with the www.SynoTekLLC.com website</p>
+    <h4>Advertising</h4>
+    <p class="muted">SYNOTEK,LLC does not allow third-party online advertising networks to collect information about users of the SynoTekLLC.com website over time so that they may showcase and/or display ads that may be relevant to our users’ interests.</p>
+    <h4>Our Partners and Vendors</h4>
+    <p class="muted">SYNOTEK,LLC may contract with third-party vendors and other service providers to perform services on behalf of SYNOTEK,LLC, which may include identifying and serving targeted advertisements, analytics services, creating and/or generating content and assisting us in the fulfillment of SYNOTEK,LLC legal, regulatory and contractual duties. </p>
+    <p class="muted">SYNOTEK,LLC will share the minimum necessary to meet SYNOTEK,LLC legitimate needs.</p>
+    
+    <h3>CONSENT</h3>
+    <p class="muted">Since SYNOTEK, LLC does not use cookies there is no need to consent to the use of cookies on your device.</p>
+    
+    
+    <h3>ADJUSTING YOUR SETTINGS</h3>
+    <p class="muted">There is no need to adjust your settings to allow, limit and/or reject the use of cookies on your device and or the use of web beacon functionality of your browser.</p>
+    <p class="muted">Please visit our Privacy Policy for more information our privacy policies and practices.</p>
+    
+    <!-- CONTACT -->
+    <section id="contact" class="section" aria-labelledby="contact-heading">
+      <h2 id="contact-heading">Questions about our Privacy Policy?</h2>
+      <div class="contact-grid">
+        <div>
+          <p class="muted mb-24">If you have any questions, concerns, or requests regarding our privacy policy or how we handle your personal information, we're here to help. Please don't hesitate to reach out to our privacy team, and we'll respond as promptly as possible. You can contact us using the information provided below, and we'll be happy to address any issues related to data protection, your privacy rights, or our information practices.</p>
+          <form id="contactForm" onsubmit="handleFormSubmit(event)" aria-label="Contact SynoTek, LLC">
+            <div class="row">
+              <div style="flex:1">
+                <label for="name">Your name <span class="small" aria-hidden="true">*</span></label>
+                <input type="text" name="name" id="name" required />
+              </div>
+              <div style="flex:1">
+                <label for="email">Your email <span class="small" aria-hidden="true">*</span></label>
+                <input type="email" name="email" id="email" required />
+              </div>
+            </div>
+            <div class="mb-16">
+              <label for="organization">Organization (optional)</label>
+              <input type="text" name="organization" id="organization" />
+            </div>
+            <div class="mb-16">
+              <label for="message">Briefly describe your question about our Privacy Policy <span class="small" aria-hidden="true">*</span></label>
+              <textarea name="message" id="message" rows="6" required></textarea>
+            </div>
+            <button type="submit">Send message</button>
+            <p class="small" style="margin-top:12px">Or email directly: <a href="mailto:Executive@SynoTekLLC.com">Executive@SynoTekLLC.com</a></p>
+          </form>
+        </div>
+        <aside class="contact-card" aria-labelledby="contact-details">
+          <h3 id="contact-details">Contact details</h3>
+          <div class="muted">SynoTek, LLC</div>
+          <div class="muted">28568 Park Avenue, Pine, Colorado 80470</div>
+          <div><a href="mailto:Executive@SynoTekLLC.com">Executive@SynoTekLLC.com</a></div>
+          <div><a href="tel:+13038382188">720-253-9070</a></div>
+          <div>
+            <h4 style="font-size:16px;margin:16px 0 8px">Privacy and Cookie Policies</h4>
+            <p class="muted small">Cookies are not used on this site. You can continue to access this website and there will be no placement of cookies on your device.</p>
+            <p><a href="synotekllcprivacy.html">Privacy Policy</a></p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <footer>
+      <div class="small">© <span id="year"></span> SynoTek, LLC — Cybersecurity & Cloud Security Consultancy</div>
+      <div>
+        <a href="https://www.linkedin.com/company/synotek-llc" target="_blank" rel="noopener" class="small" style="margin-right:16px">LinkedIn</a>
+		  <a href="https://x.com/synotekllc" target="_blank" rel="noopener" class="small" style="margin-right:16px">X.com</a>
+        <a href="mailto:Executive@SynoTekLLC.com" class="small">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+    function handleFormSubmit(evt){
+      evt.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const org = document.getElementById('organization').value.trim();
+      const message = document.getElementById('message').value.trim();
+      if(!name || !email || !message){
+        alert('Please complete all required fields.');
+        return;
+      }
+      const subject = encodeURIComponent('Consultation request from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        (org ? 'Organization: ' + org + '\n' : '') +
+        'Email: ' + email + '\n\n' +
+        message
+      );
+      const mailto = `mailto:Executive@SynoTekLLC.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+  </script>
+</body>
+</html>
