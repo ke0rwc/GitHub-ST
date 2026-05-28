@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cybersecurity Services - SynoTek, LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-sans text-gray-800">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
+                <div><span class="text-2xl font-bold tracking-tight">SynoTek</span><span class="text-xs text-gray-500 block -mt-1">LLC</span></div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="rentals.html">Rentals</a>
+                <a href="booking.html">Booking</a>
+                <a href="security.html" class="text-red-600 font-semibold">Security</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+            </div>
+            <a href="contact.html" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Get Protected</a>
+            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+            <div class="px-6 flex flex-col gap-6 text-lg">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Web Hosting</a>
+                <a href="rentals.html">Rental Management</a>
+                <a href="booking.html">Booking Solutions</a>
+                <a href="security.html">Cybersecurity</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-red-700 text-white py-28 text-center">
+        <div class="max-w-4xl mx-auto px-6">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Enterprise Cybersecurity</h1>
+            <p class="text-2xl">Protect your hosting, rentals, and online business.</p>
+        </div>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div class="bg-white p-8 rounded-3xl border card-hover">
+                <i class="fa-solid fa-shield-halved text-5xl text-red-600 mb-6"></i>
+                <h3 class="text-2xl font-semibold mb-3">24/7 Monitoring</h3>
+                <p class="text-gray-600">Continuous threat detection and response.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border card-hover">
+                <i class="fa-solid fa-bug text-5xl text-red-600 mb-6"></i>
+                <h3 class="text-2xl font-semibold mb-3">Penetration Testing</h3>
+                <p class="text-gray-600">Identify and fix vulnerabilities proactively.</p>
+            </div>
+            <div class="bg-white p-8 rounded-3xl border card-hover">
+                <i class="fa-solid fa-lock text-5xl text-red-600 mb-6"></i>
+                <h3 class="text-2xl font-semibold mb-3">Compliance Audits</h3>
+                <p class="text-gray-600">HIPAA, PCI-DSS, and local regulations.</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <p>© 2026 SynoTek, LLC • Denver, Colorado</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isOpen = false;
+        mobileBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileBtn.innerHTML = isOpen ? '✕' : '☰';
+        });
+    </script>
+</body>
+</html>
