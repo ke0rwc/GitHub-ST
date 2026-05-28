@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - SynoTek, LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-sans text-gray-800">
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
+                <div><span class="text-2xl font-bold tracking-tight">SynoTek</span><span class="text-xs text-gray-500 block -mt-1">LLC</span></div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="rentals.html">Rentals</a>
+                <a href="booking.html">Booking</a>
+                <a href="security.html">Security</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html" class="text-blue-600 font-semibold">Pricing</a>
+            </div>
+            <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Get Started</a>
+            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+            <div class="px-6 flex flex-col gap-6 text-lg">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Web Hosting</a>
+                <a href="rentals.html">Rental Management</a>
+                <a href="booking.html">Booking Solutions</a>
+                <a href="security.html">Cybersecurity</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="max-w-6xl mx-auto px-6 py-20">
+        <h1 class="text-5xl font-bold text-center mb-6">Pricing & Plans</h1>
+        <p class="text-center text-xl text-gray-600 mb-12">Use our interactive calculator</p>
+
+        <div class="bg-white rounded-3xl shadow-2xl p-10 max-w-2xl mx-auto">
+            <div class="space-y-10">
+                <div>
+                    <label class="block text-sm font-medium mb-3">Number of Properties / Sites</label>
+                    <input type="range" id="properties" min="1" max="20" value="3" class="w-full accent-blue-600">
+                    <div class="text-center text-3xl font-bold mt-2" id="propValue">3 Properties</div>
+                </div>
+
+                <div class="grid grid-cols-2 gap-4">
+                    <label class="flex items-center gap-3 p-4 border rounded-2xl"><input type="checkbox" id="hosting" checked class="accent-blue-600"> Hosting</label>
+                    <label class="flex items-center gap-3 p-4 border rounded-2xl"><input type="checkbox" id="management" checked class="accent-emerald-600"> Management</label>
+                    <label class="flex items-center gap-3 p-4 border rounded-2xl"><input type="checkbox" id="booking" checked class="accent-purple-600"> Booking Engine</label>
+                    <label class="flex items-center gap-3 p-4 border rounded-2xl"><input type="checkbox" id="security" checked class="accent-red-600"> Cybersecurity</label>
+                </div>
+
+                <div class="bg-gray-50 rounded-2xl p-10 text-center">
+                    <p class="uppercase text-xs tracking-widest mb-2">Estimated Monthly Investment</p>
+                    <div id="totalPrice" class="text-7xl font-bold text-blue-600">$897</div>
+                    <p class="text-green-600 mt-4">Potential rental revenue: $4,500+/month</p>
+                </div>
+
+                <a href="contact.html" class="block w-full text-center bg-blue-600 hover:bg-blue-700 text-white py-6 rounded-3xl text-xl font-semibold">Get This Custom Plan</a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <p>© 2026 SynoTek, LLC • Denver, Colorado</p>
+    </footer>
+
+    <script>
+        function calculatePrice() {
+            let base = parseInt(document.getElementById('properties').value) * 89;
+            if (document.getElementById('management').checked) base += parseInt(document.getElementById('properties').value) * 130;
+            if (document.getElementById('booking').checked) base += 180;
+            if (document.getElementById('security').checked) base += 110;
+
+            document.getElementById('totalPrice').textContent = '$' + Math.round(base);
+            document.getElementById('propValue').textContent = document.getElementById('properties').value + (document.getElementById('properties').value == 1 ? ' Property' : ' Properties');
+        }
+
+        document.getElementById('properties').addEventListener('input', calculatePrice);
+        document.querySelectorAll('input[type="checkbox"]').forEach(el => el.addEventListener('change', calculatePrice));
+        window.onload = calculatePrice;
+
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isOpen = false;
+        mobileBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileBtn.innerHTML = isOpen ? '✕' : '☰';
+        });
+    </script>
+</body>
+</html>
