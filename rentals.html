@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Short-Term Rental Management - SynoTek, LLC</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="font-sans text-gray-800">
+    <!-- NAV (Rentals active) -->
+    <nav class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center gap-3">
+                <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
+                <div><span class="text-2xl font-bold tracking-tight">SynoTek</span><span class="text-xs text-gray-500 block -mt-1">LLC</span></div>
+            </div>
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Hosting</a>
+                <a href="rentals.html" class="text-emerald-600 font-semibold">Rentals</a>
+                <a href="booking.html">Booking</a>
+                <a href="security.html">Security</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+            </div>
+            <a href="contact.html" class="bg-emerald-600 hover:bg-emerald-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">List Your Property</a>
+            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+        </div>
+        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+            <div class="px-6 flex flex-col gap-6 text-lg">
+                <a href="index.html">Home</a>
+                <a href="hosting.html">Web Hosting</a>
+                <a href="rentals.html">Rental Management</a>
+                <a href="booking.html">Booking Solutions</a>
+                <a href="security.html">Cybersecurity</a>
+                <a href="about.html">About</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-emerald-700 text-white py-28 text-center">
+        <h1 class="text-5xl md:text-6xl font-bold">Short-Term Rental Management</h1>
+    </header>
+
+    <div class="max-w-6xl mx-auto px-6 py-20">
+        <div class="grid md:grid-cols-2 gap-16">
+            <div>
+                <h2 class="text-4xl font-bold mb-8">We Handle Everything</h2>
+                <ul class="space-y-6 text-lg">
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> Listing optimization & professional photography</li>
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> Dynamic pricing to maximize revenue</li>
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> Guest communication & 24/7 support</li>
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> Cleaning & maintenance coordination</li>
+                    <li class="flex gap-4"><i class="fa-solid fa-check text-emerald-600 mt-1"></i> Monthly performance reports</li>
+                </ul>
+            </div>
+            <img src="https://picsum.photos/id/1015/800/600" class="rounded-3xl" alt="Rental Property">
+        </div>
+    </div>
+
+    <footer class="bg-gray-900 text-gray-400 py-12 text-center">
+        <p>© 2026 SynoTek, LLC • Denver, Colorado</p>
+    </footer>
+
+    <script>
+        const mobileBtn = document.getElementById('mobileBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+        let isOpen = false;
+        mobileBtn.addEventListener('click', () => {
+            isOpen = !isOpen;
+            mobileMenu.classList.toggle('hidden', !isOpen);
+            mobileBtn.innerHTML = isOpen ? '✕' : '☰';
+        });
+    </script>
+</body>
+</html>
