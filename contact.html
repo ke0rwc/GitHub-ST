@@ -7,8 +7,6 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     
-    <!-- Google reCAPTCHA -->
-    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <style>
         .form-input {
@@ -29,8 +27,9 @@
     </style>
 </head>
 <body class="font-sans text-gray-800">
+    <a href="#main" class="sr-only focus:not-sr-only p-2 bg-white text-blue-700">Skip to content</a>
     <!-- NAV (same as previous) -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <nav class="bg-white shadow-md sticky top-0 z-50" aria-label="Primary navigation">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
@@ -46,9 +45,9 @@
                 <a href="pricing.html">Pricing</a>
             </div>
             <a href="contact.html" class="bg-blue-600 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Contact</a>
-            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+            <button id="mobileBtn" type="button" class="md:hidden text-3xl text-gray-700">☰</button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+        <div id="mobileMenu" class="hidden bg-white border-t py-6">
             <div class="px-6 flex flex-col gap-6 text-lg">
                 <a href="index.html">Home</a>
                 <a href="hosting.html">Web Hosting</a>
@@ -65,64 +64,68 @@
     <!-- HERO -->
     <header class="bg-gradient-to-r from-blue-700 to-blue-900 text-white py-28">
         <div class="max-w-4xl mx-auto px-6 text-center">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Get Your Free Audit</h1>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Get in Touch</h1>
             <p class="text-2xl text-blue-100">Tell us about your needs. We'll respond within 1 business day.</p>
         </div>
     </header>
 
     <!-- CONTACT FORM -->
-    <div class="max-w-2xl mx-auto px-6 py-20">
-        <form id="contactForm" class="space-y-8">
+    
+
+    <div id="main" class="max-w-2xl mx-auto px-6 py-20">
+        <form id="contactForm" class="space-y-8" onsubmit="handleFormSubmit(event)" aria-label="Contact SynoTek, LLC">
             <div>
-                <label class="block text-sm font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
-                <input type="text" id="name" required
+                <label for="name" class="block text-sm font-medium mb-2">Full Name <span class="text-red-500">*</span></label>
+                <input type="text" id="name" required aria-required="true"
                        class="form-input w-full px-6 py-4 rounded-3xl border border-gray-300 focus:outline-none text-lg"
                        placeholder="John Smith">
                 <div id="nameError" class="error"></div>
             </div>
 
             <div>
-                <label class="block text-sm font-medium mb-2">Business Email <span class="text-red-500">*</span></label>
-                <input type="email" id="email" required
+                <label for="organization" class="block text-sm font-medium mb-2">Organization <span class="text-red-500">*</span></label>
+                <input type="text" id="organization" required aria-required="true"
+                       class="form-input w-full px-6 py-4 rounded-3xl border border-gray-300 focus:outline-none text-lg"
+                       placeholder="Your Company Name">
+                <div id="organizationError" class="error"></div>
+            </div>
+
+            <div>
+                <label for="email" class="block text-sm font-medium mb-2">Business Email <span class="text-red-500">*</span></label>
+                <input type="email" id="email" required aria-required="true"
                        class="form-input w-full px-6 py-4 rounded-3xl border border-gray-300 focus:outline-none text-lg"
                        placeholder="you@business.com">
                 <div id="emailError" class="error"></div>
             </div>
 
             <div>
-                <label class="block text-sm font-medium mb-2">Phone Number</label>
-                <input type="tel" id="phone"
-                       class="form-input w-full px-6 py-4 rounded-3xl border border-gray-300 focus:outline-none text-lg"
-                       placeholder="(720) 555-1234">
-                <div id="phoneError" class="error"></div>
-            </div>
-
-            <div>
-                <label class="block text-sm font-medium mb-2">Message / Requirements</label>
+                <label for="message" class="block text-sm font-medium mb-2">What do you need help with?</label>
                 <textarea id="message" rows="5"
                           class="form-input w-full px-6 py-4 rounded-3xl border border-gray-300 focus:outline-none text-lg"
                           placeholder="I'm interested in rental management, secure hosting..."></textarea>
             </div>
 
-            <!-- reCAPTCHA -->
-            <div class="flex justify-center py-4">
-                <div class="g-recaptcha" data-sitekey="YOUR_SITE_KEY_HERE"></div>
-            </div>
-            <div id="recaptchaError" class="error text-center"></div>
+            
 
             <button type="submit" id="submitBtn"
                     class="w-full bg-blue-600 hover:bg-blue-700 text-white py-6 rounded-3xl text-xl font-semibold transition-all flex items-center justify-center gap-3">
-                <span id="btnText">Submit Request - Get Free Audit</span>
+                <span id="btnText">Submit Inquiry</span>
             </button>
         </form>
 
         <p class="text-center text-sm text-gray-500 mt-10">
-            Protected by reCAPTCHA • We respect your privacy
+            Or email directly: <a href="mailto:Executive@SynoTekLLC.com">Executive@SynoTekLLC.com</a>
         </p>
     </div>
 
     <footer class="bg-gray-900 text-gray-400 py-12 text-center">
-        <p>© 2026 SynoTek, LLC • Denver, Colorado • All Rights Reserved</p>
+        <p>© <span id="year"></span> SynoTek, LLC • Denver, Colorado • All Rights Reserved</p>
+    
+    <div>
+        <a href="https://www.linkedin.com/company/synotek-llc" target="_blank" rel="noopener" class="small" style="margin-right:16px">LinkedIn</a>
+        <a href="mailto:Executive@SynoTekLLC.com" class="small">Email</a>
+      </div>
+    
     </footer>
 
     <script>
@@ -135,84 +138,31 @@
             mobileMenu.classList.toggle('hidden', !isOpen);
             mobileBtn.innerHTML = isOpen ? '✕' : '☰';
         });
+</script>
 
-        // ============= FORM + reCAPTCHA VALIDATION =============
-        const form = document.getElementById('contactForm');
-        const nameInput = document.getElementById('name');
-        const emailInput = document.getElementById('email');
-        const phoneInput = document.getElementById('phone');
-        const submitBtn = document.getElementById('submitBtn');
-        const btnText = document.getElementById('btnText');
-
-        function showError(input, message) {
-            const errorDiv = document.getElementById(input.id + 'Error') || document.getElementById('recaptchaError');
-            if (errorDiv) errorDiv.textContent = message;
-            if (input) input.classList.add('!border-red-500');
-        }
-
-        function clearError(input) {
-            const errorDiv = document.getElementById(input.id + 'Error');
-            if (errorDiv) errorDiv.textContent = '';
-            if (input) input.classList.remove('!border-red-500');
-        }
-
-        function isValidEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        function isValidPhone(phone) {
-            return phone.length === 0 || /^[\+]?[0-9\s\-\(\)]{10,}$/.test(phone);
-        }
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault();
-            let valid = true;
-
-            // Clear previous errors
-            document.getElementById('recaptchaError').textContent = '';
-            clearError(nameInput);
-            clearError(emailInput);
-            clearError(phoneInput);
-
-            // Name
-            if (nameInput.value.trim().length < 3) {
-                showError(nameInput, "Name must be at least 3 characters");
-                valid = false;
-            }
-
-            // Email
-            if (!isValidEmail(emailInput.value.trim())) {
-                showError(emailInput, "Please enter a valid email address");
-                valid = false;
-            }
-
-            // reCAPTCHA Check
-            const response = grecaptcha.getResponse();
-            if (response.length === 0) {
-                showError(null, "Please complete the reCAPTCHA verification");
-                valid = false;
-            }
-
-            if (valid) {
-                submitBtn.disabled = true;
-                btnText.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Submitting...`;
-
-                // Simulate submission (replace with real backend call)
-                setTimeout(() => {
-                    alert("✅ Thank you! Your request has been received.\n\nWe'll contact you within 1 business day.");
-                    
-                    form.reset();
-                    grecaptcha.reset(); // Reset reCAPTCHA
-                    submitBtn.disabled = false;
-                    btnText.textContent = "Submit Request - Get Free Audit";
-                }, 1800);
-            }
-        });
-
-        // Real-time validation
-        nameInput.addEventListener('input', () => clearError(nameInput));
-        emailInput.addEventListener('input', () => clearError(emailInput));
-        phoneInput.addEventListener('input', () => clearError(phoneInput));
-    </script>
+      <script>
+        const yearEl = document.getElementById('year');
+        if (yearEl) yearEl.textContent = new Date().getFullYear();
+    function handleFormSubmit(evt){
+      evt.preventDefault();
+      const name = document.getElementById('name').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const org = document.getElementById('organization').value.trim();
+      const message = document.getElementById('message').value.trim();
+            if(!name || !email || !org || !message){
+        alert('Please complete all required fields.');
+        return;
+      }
+      const subject = encodeURIComponent('Consultation request from ' + name);
+      const body = encodeURIComponent(
+        'Name: ' + name + '\n' +
+        (org ? 'Organization: ' + org + '\n' : '') +
+        'Email: ' + email + '\n\n' +
+        message
+      );
+      const mailto = `mailto:Executive@SynoTekLLC.com?subject=${subject}&body=${body}`;
+      window.location.href = mailto;
+    }
+  </script>
 </body>
 </html>

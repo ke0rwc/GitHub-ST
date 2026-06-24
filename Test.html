@@ -13,7 +13,8 @@
     </style>
 </head>
 <body class="font-sans text-gray-800">
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <a href="#main" class="sr-only focus:not-sr-only p-2 bg-white text-blue-700">Skip to content</a>
+    <nav class="bg-white shadow-md sticky top-0 z-50" aria-label="Primary navigation">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
@@ -29,9 +30,9 @@
                 <a href="pricing.html" class="hover:text-blue-600">Pricing</a>
             </div>
             <a href="contact.html" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Free Audit</a>
-            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+            <button id="mobileBtn" type="button" class="md:hidden text-3xl text-gray-700">☰</button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+        <div id="mobileMenu" class="hidden bg-white border-t py-6">
             <div class="px-6 flex flex-col gap-6 text-lg">
                 <a href="index.html">Home</a>
                 <a href="hosting.html">Web Hosting</a>
@@ -46,7 +47,7 @@
     </nav>
 
     <header class="hero-bg text-white py-32">
-        <div class="max-w-5xl mx-auto px-6 text-center">
+        <div id="main" class="max-w-5xl mx-auto px-6 text-center">
             <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">Secure Hosting.<br>Smart Rental Management.</h1>
             <p class="text-2xl md:text-3xl mb-10">Web hosting, short-term rental management, booking systems & enterprise cybersecurity.</p>
             <a href="contact.html" class="bg-white text-blue-700 px-10 py-5 rounded-3xl text-xl font-semibold inline-flex items-center gap-3">Get Your Free Audit →</a>
@@ -98,7 +99,7 @@
 </body>
 </html>
         <!-- Mobile Menu -->
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6 shadow-lg">
+        <div id="mobileMenu" class="hidden bg-white border-t py-6 shadow-lg">
             <div class="flex flex-col px-6 space-y-6 text-lg font-medium">
                 <a href="#services" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Services</a>
                 <a href="#hosting" onclick="toggleMobileMenu()" class="py-2 hover:text-blue-600">Web Hosting</a>
@@ -147,18 +148,18 @@
             <h2 class="text-4xl font-bold mb-6">Ready to Secure and Grow Your Business?</h2>
             <p class="text-xl mb-10">Get a free hosting + security audit and rental revenue consultation (valued at $450).</p>
             
-            <form id="contactForm" class="max-w-md mx-auto space-y-6">
+            <form id="contactForm" class="max-w-md mx-auto space-y-6" aria-label="Contact SynoTek, LLC">
                 <div>
-                    <input type="text" id="name" name="name" 
+                          <input type="text" id="name" name="name" 
                            class="form-input w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 placeholder:text-white/70 focus:outline-none text-white"
-                           placeholder="Full Name" required>
+                              placeholder="Full Name" required aria-required="true">
                     <div id="nameError" class="error"></div>
                 </div>
                 
                 <div>
-                    <input type="email" id="email" name="email" 
+                          <input type="email" id="email" name="email" 
                            class="form-input w-full px-6 py-4 rounded-2xl bg-white/10 border border-white/30 placeholder:text-white/70 focus:outline-none text-white"
-                           placeholder="Business Email" required>
+                              placeholder="Business Email" required aria-required="true">
                     <div id="emailError" class="error"></div>
                 </div>
                 

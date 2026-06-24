@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="font-sans text-gray-800">
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <a href="#main" class="sr-only focus:not-sr-only p-2 bg-white text-blue-700">Skip to content</a>
+    <nav class="bg-white shadow-md sticky top-0 z-50" aria-label="Primary navigation">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
@@ -23,10 +24,10 @@
                 <a href="about.html">About</a>
                 <a href="pricing.html">Pricing</a>
             </div>
-            <a href="contact.html" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Get Protected</a>
-            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+            <a href="contact.html" class="bg-red-600 hover:bg-red-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Contact Us</a>
+            <button id="mobileBtn" type="button" class="md:hidden text-3xl text-gray-700">☰</button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+        <div id="mobileMenu" class="hidden bg-white border-t py-6">
             <div class="px-6 flex flex-col gap-6 text-lg">
                 <a href="index.html">Home</a>
                 <a href="hosting.html">Web Hosting</a>
@@ -42,33 +43,61 @@
 
     <header class="bg-red-700 text-white py-28 text-center">
         <div class="max-w-4xl mx-auto px-6">
-            <h1 class="text-5xl md:text-6xl font-bold mb-6">Enterprise Cybersecurity</h1>
-            <p class="text-2xl">Protect your hosting, rentals, and online business.</p>
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">Threat Protection & Regulatory Compliance</h1>
+            <p class="text-2xl">Protecting your online presence and meet compliance and regulatory requirements.</p>
         </div>
     </header>
-
-    <div class="max-w-6xl mx-auto px-6 py-20">
+ <p class="text-gray-600"><br>We are a recognized security leader, trusted advisor, and with deep expertise in cloud security, AI/ML risk, compliance frameworks, and governance automation. We guide organizations through FedRAMP authorizations, NIST and ISO compliance, HIPAA readiness, and cloud security programs across enterprise and public sector environments. 
+    <br>
+We implement programs for organizations including the United States Federal government, Big 4, Enterprise AI Platform (IBM Watson), and FedRAMP CSP. Our mission is simple: hHlp organizations innovate securely while reducing risk, and achieving compliance faster.</p>
+    <div id="main" class="max-w-6xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-3 gap-8">
             <div class="bg-white p-8 rounded-3xl border card-hover">
                 <i class="fa-solid fa-shield-halved text-5xl text-red-600 mb-6"></i>
                 <h3 class="text-2xl font-semibold mb-3">24/7 Monitoring</h3>
-                <p class="text-gray-600">Continuous threat detection and response.</p>
+                <p class="text-gray-600">As a leading web hosting provider for global enterprises, we understand that continuous visibility is critical in today’s evolving threat landscape. Are you currently aware of the importance of 24/7 security monitoring to detect, respond to, and mitigate potential threats in real time? Our team delivers dedicated 24/7 security monitoring as a core part of our hosting services, providing round-the-clock oversight, rapid incident response, and peace of mind so you can focus on your core business with confidence.</p>
             </div>
             <div class="bg-white p-8 rounded-3xl border card-hover">
                 <i class="fa-solid fa-bug text-5xl text-red-600 mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Penetration Testing</h3>
-                <p class="text-gray-600">Identify and fix vulnerabilities proactively.</p>
+                <h3 class="text-2xl font-semibold mb-3">Penetration/Vulnerability Testing</h3>
+                <p class="text-gray-600">As a leading web hosting provider for global enterprises, we recognize that proactive security is essential in today’s threat landscape. Are you currently aware of the importance of conducting regular penetration testing and vulnerability scans to identify and mitigate potential risks to your infrastructure and data? Our team provides comprehensive penetration testing and automated vulnerability scanning on a regular scheduled basis as part of our security services, helping customers maintain a strong security posture and meet compliance requirements with confidence.</p>
             </div>
             <div class="bg-white p-8 rounded-3xl border card-hover">
                 <i class="fa-solid fa-lock text-5xl text-red-600 mb-6"></i>
-                <h3 class="text-2xl font-semibold mb-3">Compliance Audits</h3>
-                <p class="text-gray-600">HIPAA, PCI-DSS, and local regulations.</p>
-            </div>
+                <h3 class="text-2xl font-semibold mb-3">Compliance Alignment</h3>
+                <p class="text-gray-600">As a leading web hosting provider for global enterprises, we understand that data privacy and regulatory compliance are critical to your operations. Are you currently aware of the specific privacy regulations (such as GDPR, CCPA/CPRA, or others applicable to your regions) and GRC (Governance, Risk, and Compliance) requirements your organization must meet when selecting and managing hosting solutions? Our team would be happy to discuss how our compliant infrastructure and support services can help you meet these obligations with confidence.</p> 
+                <p class="text-gray-600"><br></p>
+                <ul class="space-y-4">
+                    <li>Federal Risk and Authorization Management Program (FedRAMP)</li>
+                    <li>Federal Information Systems Management Act (FISMA)</li>
+                    <li>National Institute of Standards and Technology (NIST) Risk Management Framework (NIST RMF)</li>
+                    <li>National Institute of Standards and Technology (NIST) Cybersecurity Framework (NIST CSF)</li>
+                    <li>Center for Medicare & Medicaid Services (CMS) Minimum Acceptable Risk Standards for Exchanges (MARS-E)</li>
+                    <li>Health Information Portability and Accountability Act (HIPAA) Security Rule (HSR)</li>
+                    <li>Department of Commerce Privacy Shield</li>
+                    <li>Cloud Security Alliance (CSA)</li>
+                    <li>International Organization for Standardization (ISO) 27000 Series</li>
+                    <li>General Data Protection Regulation (GDPR)</li>
+                    <li>Center for Internet Security (CIS) Critical Security Controls</li>
+                    <li>Defense Information Systems Agency (DISA) Security Technical Implementation Guide (STIGS)</li>
+                    <li>Information Technology Infrastructure Library (ITIL)</li>
+                    <li>Control Objectives for Information and Related Technologies (COBIT)</li>
+                    <li>Payment Card Industry Data Security Standards (PCI-DSS)</li>
+                </ul>
+                
+        
+               </div>
         </div>
     </div>
 
     <footer class="bg-gray-900 text-gray-400 py-12 text-center">
         <p>© 2026 SynoTek, LLC • Denver, Colorado</p>
+    
+    <div>
+        <a href="https://www.linkedin.com/company/synotek-llc" target="_blank" rel="noopener" class="small" style="margin-right:16px">LinkedIn</a>
+        <a href="mailto:Executive@SynoTekLLC.com" class="small">Email</a>
+      </div>
+    
     </footer>
 
     <script>

@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="font-sans text-gray-800">
-    <nav class="bg-white shadow-md sticky top-0 z-50">
+    <a href="#main" class="sr-only focus:not-sr-only p-2 bg-white text-blue-700">Skip to content</a>
+    <nav class="bg-white shadow-md sticky top-0 z-50" aria-label="Primary navigation">
         <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
             <div class="flex items-center gap-3">
                 <div class="w-11 h-11 bg-blue-600 rounded-2xl flex items-center justify-center text-white text-3xl font-bold">S</div>
@@ -23,10 +24,10 @@
                 <a href="about.html">About</a>
                 <a href="pricing.html">Pricing</a>
             </div>
-            <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Build Booking Site</a>
-            <button id="mobileBtn" class="md:hidden text-3xl text-gray-700">☰</button>
+            <a href="contact.html" class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-2xl text-sm font-semibold">Contact Us</a>
+            <button id="mobileBtn" type="button" class="md:hidden text-3xl text-gray-700">☰</button>
         </div>
-        <div id="mobileMenu" class="hidden md:hidden bg-white border-t py-6">
+        <div id="mobileMenu" class="hidden bg-white border-t py-6">
             <div class="px-6 flex flex-col gap-6 text-lg">
                 <a href="index.html">Home</a>
                 <a href="hosting.html">Web Hosting</a>
@@ -47,7 +48,7 @@
         </div>
     </header>
 
-    <div class="max-w-6xl mx-auto px-6 py-20">
+    <div id="main" class="max-w-6xl mx-auto px-6 py-20">
         <div class="grid md:grid-cols-2 gap-16 items-center">
             <div>
                 <h2 class="text-4xl font-bold mb-8">Powerful Booking Features</h2>
@@ -66,6 +67,12 @@
 
     <footer class="bg-gray-900 text-gray-400 py-12 text-center">
         <p>© 2026 SynoTek, LLC • Denver, Colorado</p>
+    
+        <div>
+        <a href="https://www.linkedin.com/company/synotek-llc" target="_blank" rel="noopener" class="small" style="margin-right:16px">LinkedIn</a>
+        <a href="mailto:Executive@SynoTekLLC.com" class="small">Email</a>
+      </div>
+    
     </footer>
 
     <script>

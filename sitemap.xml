@@ -2,5 +2,45 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 	<url>
 		<loc>http://www.synotekllc.com/index.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/about.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/booking.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/contact.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/hosting.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/pricing.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/rentals.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/security.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/about.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url><url>
+		<loc>http://www.synotekllc.com/synotekllccookie.html</loc>
+		<lastmod>2026-06-10</lastmod>
+	</url>
+	<url>
+		<loc>http://www.synotekllc.com/synotekllcprivacy.html</loc>
+		<lastmod>2026-06-10</lastmod>
 	</url>
 </urlset>
